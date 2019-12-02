@@ -127,7 +127,7 @@ def main():
           results[average] = f1_score(mlb.fit_transform(y_test), mlb.fit_transform(preds), average=average)
   
       all_results[train_percent].append(results)
-  f = open(resultfile,"wb")
+  f = open(resultfile + ".results","wb")
   pickle.dump(all_results,f)
   f.close()
   
